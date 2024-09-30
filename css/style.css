@@ -1,0 +1,312 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.menu {
+    background: #343a40;
+}
+/* barra de navegação */
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.custom-color {
+    color: #609af7;
+}
+
+.fa-dragon {
+    padding: 0 20px;
+}
+
+.navbar-brand {
+    display: inline-block; /* Para permitir a animação */
+    transition: color 0.3s, transform 0.3s; /* Transição suave */
+}
+
+.navbar-brand:hover {
+    color: #f0ad4e; /* Cor ao passar o mouse */
+    transform: scale(1.1); /* Aumenta o tamanho */
+}
+
+.navbar-brand i {
+    transition: transform 0.3s; /* Transição suave para o ícone */
+}
+
+.navbar-brand:hover i {
+    transform: rotate(360deg); /* Gira o ícone ao passar o mouse */
+}
+
+
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba(255, 255, 255, 1)" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+}
+
+.navbar-nav .nav-link {
+    transition: color 0.3s, transform 0.3s; 
+}
+
+.navbar-nav .nav-link:hover {
+    color: #f0ad4e;
+    transform: scale(1.1); 
+}
+
+.custom-color {
+    display: inline-block;
+    color: #609af7;
+    transition: transform 0.3s ease, color 0.3s ease;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.custom-color:hover {
+    transform: scale(1.1);
+    color: red;
+    animation: pulse 0.6s infinite;
+}
+
+@keyframes pulse {
+0% {
+    transform: scale(1.1);
+}
+50% {
+    transform: scale(1.2);
+}
+100% {
+    transform: scale(1.1);
+}
+}
+
+/* imagem de fundo */
+.hero-image {
+    width: 100%;
+    height: auto;
+}
+
+/* parallax */
+.parallax {
+    background-image: url('../images/back.jpg');
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content {
+    background: rgba(40, 40, 40, 0.5);
+    position: relative;
+    top: 55%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.titulo {
+    margin-top: -100px; /* Correção de padding-top */
+    margin-bottom: 70px;
+}
+
+h1 {
+    font-size: 45px;
+    text-align: left;
+    margin-top: -5px;
+}
+
+p {
+    text-align: center;
+    margin: 0;
+    line-height: 1.5;
+    width: 100%;
+}
+
+/* icones das redes sociais */
+.redes-soc {
+    text-decoration: none;
+    font-size: 40px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 10px;
+    transition: color 0.3s;
+}
+
+.fa-instagram {
+    color: #f54287;
+}
+
+.fa-youtube {
+    color: #fc2121;
+}
+
+.fa-whatsapp {
+    color: green;
+}
+
+.fa-linkedin {
+    margin: 15px 20px;
+    font-size: 48px;
+}
+
+.fa-instagram, .fa-whatsapp, .fa-youtube {
+    margin: 15px 20px;
+    font-size: 48px;
+}
+
+.redes-soc i {
+    transition: transform 0.3s;
+}
+
+.redes-soc i:hover {
+    transform: scale(1.2); 
+    color: white;
+}
+
+/* seção 2 */
+.section-2 {
+    display: flex;
+    align-items: center;
+}
+
+.btn-primary {
+    background: #343a40;
+}
+
+.btn-primary:hover {
+    background-color: #541212;
+}
+
+.sec-1 {
+    flex: 1;
+}
+
+.sec-2 {
+    flex: 1;
+    padding: 0 10px;
+}
+
+.img-pc {
+    max-width: 90%;
+    height: auto;
+}
+
+.sec-2 span {
+    display: block;
+    margin-bottom: 20px;
+}
+
+/* seção 3 - time e diferenciais */
+.team-differentials {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.team, .differentials {
+    flex: 1;
+    margin: 10px;
+}
+
+.team img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.team-member {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.differentials ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.differentials ul li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.differentials ul li::before {
+    content: "✔️";
+    position: absolute;
+    left: 0;
+    color: green;
+}
+
+/* seção 4 - depoimentos */
+.testimonial {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.testimonial h5 {
+    margin-bottom: 10px;
+}
+
+
+.btn-primary:focus, .nav-link:focus {
+    outline: 2px solid #343a40;
+}
+
+/* responsividade */
+@media screen and (max-width: 900px) {
+
+    .redes-soc {
+        display: inline-block;
+    }
+
+    .img-pc {
+        display: inline-block;
+        text-align: center;
+    }
+
+    .section-2 {
+        text-align: center;
+        padding: 0 10px;
+    }
+
+    .sec-2 {
+        padding: 0 25px;
+    }
+
+    .team-differentials {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-2 {
+        flex-direction: column;
+    }
+
+    .sec-2 {
+        padding: 30px 25px;
+    }
+
+    .team-differentials {
+        flex-direction: column;
+    }
+}

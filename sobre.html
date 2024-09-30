@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre a Leuzer's</title>
+    <style>
+        body {
+            position: relative;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh; /* Certifique-se de que o body ocupa a altura mínima da tela */
+            overflow: auto; /* Permite rolagem se o conteúdo exceder a altura da tela */
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("images/gif1.gif");
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: -1; /* Coloca a imagem atrás do conteúdo */
+        }
+
+        body::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6); /* Camada semi-transparente escura */
+            z-index: 0; /* Coloca a cor acima da imagem, mas abaixo do texto */
+        }
+
+        span {
+            color: white;
+            font-size: 60px; /* Tamanho maior para o título */
+            margin: 20px; /* Margem para o título */
+            display: block; /* Para garantir que o título ocupe uma linha inteira */
+            position: relative; /* Para garantir que o span fique acima das camadas */
+            z-index: 1; /* Coloca o título acima da camada opaca */
+        }
+
+        p {
+            color: white;
+            position: relative; /* Para garantir que o texto fique acima das camadas */
+            z-index: 1; /* Coloca o texto acima da camada opaca */
+            font-size: 30px;
+            margin: 20px; /* Adiciona margem entre os parágrafos */
+            line-height: 1.5; /* Aumenta o espaçamento entre as linhas */
+        }
+
+        /* Estilo para o botão de voltar */
+        .back-button {
+            position: absolute;
+            bottom: 6px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #7d1f1f; /* Cor do fundo do botão */
+            color: floralwhite; /* Cor do texto do botão */
+            border: none;
+            border-radius: 5px;
+            font-size: 20px;
+            cursor: pointer;
+            z-index: 1; /* Coloca o botão acima das camadas */
+            text-decoration: none;
+        }
+
+        .back-button:hover {
+            background-color: #4d1f1f; /* Cor de fundo ao passar o mouse */
+        }
+    </style>
+</head>
+
+<body>
+    <span>Sobre a Leuzer's</span>
+
+    <p>A Leuzer's é uma marca que nasceu da paixão pela inovação e pela busca incessante pela excelência. Desde o seu início, temos nos dedicado a criar produtos que não apenas atendem às necessidades dos nossos clientes, mas que também inspiram e transformam o cotidiano. Nossa missão é oferecer soluções que unem qualidade, design e funcionalidade, sempre com um toque de criatividade.</p>
+
+    <p>Valorizamos cada detalhe no processo de desenvolvimento dos nossos produtos, desde a escolha dos materiais até a entrega final. Nossa equipe é composta por profissionais altamente qualificados e apaixonados, que trabalham em conjunto para garantir que cada produto Leuzer's seja uma verdadeira obra-prima.</p>
+
+    <p>Além disso, estamos comprometidos com a sustentabilidade. Acreditamos que é possível inovar sem comprometer o futuro do nosso planeta. Por isso, buscamos constantemente práticas sustentáveis em toda a nossa cadeia produtiva, garantindo que cada compra feita na Leuzer's seja um passo em direção a um futuro melhor.</p>
+
+    <p>Junte-se a nós nessa jornada! Descubra o que significa ser parte da família Leuzer's e experimente a diferença que a qualidade e a dedicação podem fazer em sua vida.</p>
+
+    <!-- Botão de voltar para a página inicial -->
+    <a href="index.html" class="back-button">Voltar à Página Inicial</a>
+</body>
+</html>

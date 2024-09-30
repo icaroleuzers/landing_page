@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            color: #333;
+            position: relative;
+            height: 100vh; /* Altura total da tela */
+            overflow: hidden; /* Evita que elementos saiam da tela */
+        }
+
+        /* Imagem de fundo */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("images/gif2.gif");
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: -1; /* Coloca a imagem atrás do conteúdo */
+        }
+
+        /* Camada escura sobre a imagem */
+        body::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6); /* Escurecimento com opacidade */
+            z-index: 0; /* Coloca a cor acima da imagem, mas abaixo do texto */
+        }
+
+        @keyframes changeColor {
+            0% { color: red; }
+            25% { color: blue; }
+            50% { color: green; }
+            75% { color: orange; }
+            100% { color: red; }
+        }
+
+        /* Aplicando a animação à palavra */
+        .color-change {
+            font-size: 40px;
+            font-weight: bold;
+            animation: changeColor 4s infinite; /* 4 segundos para completar o ciclo */
+        }
+
+        h1 {
+            text-align: center; /* Centraliza o título */
+            margin-bottom: 20px; /* Espaço abaixo do título */
+            color: red; /* Cor do título */
+            z-index: 1; /* Mantém o título acima da camada escura */
+            position: relative; /* Para garantir que o título fique acima da camada escura */
+        }
+
+        .form-container {
+            max-width: 500px; /* Largura máxima para o formulário */
+            margin: 0 auto; /* Centraliza o formulário */
+            background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com opacidade */
+            padding: 20px; /* Espaçamento interno */
+            border-radius: 8px; /* Borda arredondada */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            position: relative; /* Para garantir que a camada acima seja posicionada corretamente */
+            z-index: 1; /* Para que o formulário esteja acima da camada escura */
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold; /* Destaca os rótulos */
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px; /* Tamanho da fonte nos campos */
+            transition: border-color 0.3s; /* Transição suave na borda */
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus {
+            border-color: #4CAF50; /* Cor da borda ao focar */
+            outline: none; /* Remove contorno padrão */
+        }
+
+        input[type="submit"] {
+            background-color: #343a40; /* Cor verde */
+            color: white; /* Texto branco */
+            padding: 10px 15px; /* Espaçamento interno */
+            border: none; /* Sem borda */
+            border-radius: 5px; /* Bordas arredondadas */
+            cursor: pointer; /* Cursor de mão ao passar o mouse */
+            font-size: 18px; /* Tamanho da fonte do botão */
+            transition: background-color 0.3s; /* Transição suave na cor de fundo */
+            width: 100%; /* Largura total do botão */
+        }
+
+        input[type="submit"]:hover {
+            background-color: #191d21; /* Cor de fundo ao passar o mouse */
+        }
+
+        .btn-voltar {
+            display: inline-block; /* Para ser tratado como botão */
+            background-color: #541212; /* Cor de fundo vermelha */
+            color: white; /* Texto branco */
+            padding: 10px 20px; /* Espaçamento interno */
+            border: none; /* Sem borda */
+            border-radius: 5px; /* Bordas arredondadas */
+            cursor: pointer; /* Cursor de mão ao passar o mouse */
+            font-size: 16px; /* Tamanho da fonte */
+            text-decoration: none; /* Remove sublinhado do link */
+            text-align: center; /* Centraliza o texto */
+            margin-top: 20px; /* Margem acima do botão voltar */
+            width: 93%; /* Largura total para o botão voltar */
+        }
+
+        .btn-voltar:hover {
+            background-color: #400d0d; /* Cor de fundo ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+
+<h1 class="color-change">Entre em contato!</h1>
+
+<div class="form-container">
+    <form action="#" method="POST"> <!-- Altere o action para um local válido para testes -->
+        <div class="form-group">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" placeholder="(xx) xxxxx-xxxx" pattern="\(\d{2}\) \d{5}-\d{4}" required title="Digite no formato (xx) xxxxx-xxxx">
+        </div>
+
+        <input type="submit" value="Enviar">
+    </form>
+
+    <a href="index.html" class="btn-voltar">Voltar</a>
+</div>
+
+</body>
+</html>
